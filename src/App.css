@@ -1,0 +1,13 @@
+body {
+  background-color: #F5F5F5;
+}
+
+#root {
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+  align-items: center;
+
+  padding-inline: 24px;
+}
