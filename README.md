@@ -23,7 +23,7 @@ This project is an example of how to use React Hook Form and Zod to create a mul
 Clone the project:
 
 ```bash
-git clone https://github.com/[your-name]/[project-name]
+git clone https://github.com/alyssonbarrera/multischema-form.git
 ```
 Install the dependencies:
 ```bash
