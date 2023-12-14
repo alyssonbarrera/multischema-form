@@ -11,7 +11,7 @@ type ButtonProps = ButtonElementProps & {
 
 export function Button({ loading, ...props }: ButtonProps) {
   return (
-    <ButtonElement {...props} disabled={loading}>
+    <ButtonElement {...props} disabled={props.disabled || loading}>
       {loading && (
         <Fragment>
           <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
