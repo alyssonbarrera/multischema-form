@@ -10,8 +10,14 @@ export function PersonalInformation() {
   } = useFormContext<RegistrationFormSchemaProps>()
 
   return (
-    <fieldset className="space-y-4">
-      <legend className="text-xl font-semibold mx-auto">
+    <fieldset
+      className="space-y-4"
+      data-testid="personal-information-component-container"
+    >
+      <legend
+        className="text-xl font-semibold mx-auto"
+        data-testid="personal-information-component-title"
+      >
         Personal information
       </legend>
       <Controller
@@ -24,6 +30,7 @@ export function PersonalInformation() {
             type="text"
             label="First name"
             errorMessage={errors?.personalInformation?.firstName?.message}
+            data-testid="personal-information-component-first-name"
           />
         )}
       />
@@ -37,6 +44,7 @@ export function PersonalInformation() {
             type="text"
             label="Last name"
             errorMessage={errors?.personalInformation?.lastName?.message}
+            data-testid="personal-information-component-last-name"
           />
         )}
       />
@@ -48,9 +56,9 @@ export function PersonalInformation() {
           <Input
             {...field}
             type="tel"
-            inputMode="numeric"
             label="Phone"
             errorMessage={errors?.personalInformation?.phone?.message}
+            data-testid="personal-information-component-phone"
           />
         )}
       />

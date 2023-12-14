@@ -8,17 +8,17 @@ export default mergeConfig(
     plugins: [
       AutoImport({
         imports: ['vitest'],
-        dts: false,
+        dts: 'src/@types/vitest.d.ts',
       }),
     ],
     test: {
       globals: true,
       exclude: ['**/node_modules/**', '**/dist/**'],
-      setupFiles: ['/src/__tests__/setupTests.ts'],
+      setupFiles: ['src/__tests__/setupTests.ts'],
       environment: 'jsdom',
       coverage: {
-        exclude: ['**/node_modules/**', '**/dist/**'],
-        include: ['src/**/*.tsx'],
+        exclude: ['**/node_modules/**', '**/dist/**', 'src/components/ui/**'],
+        include: ['src/components/**/*.tsx'],
         reporter: ['text', 'text-summary', 'html'],
       },
     },

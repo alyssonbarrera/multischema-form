@@ -68,12 +68,18 @@ export function RegistrationForm() {
       <form
         className="space-y-4 basis-[400px] h-max mx-auto p-6 bg-white flex flex-col justify-center transform rounded-md shadow-lg"
         onSubmit={handleSubmit(handleNextFormType)}
+        data-testid="registration-form-component-container"
       >
         {formTypeIsPersonalInformation && <PersonalInformation />}
         {formTypeIsShippingAddress && <ShippingAddress />}
         {formTypeIsPaymentInformation && <PaymentInformation />}
 
-        <Button className="w-full self-center" loading={isSubmitting}>
+        <Button
+          type="submit"
+          className="w-full self-center"
+          loading={isSubmitting}
+          data-testid="registration-form-component-submit-button"
+        >
           {formTypeIsPaymentInformation ? 'Submit' : 'Next'}
         </Button>
       </form>

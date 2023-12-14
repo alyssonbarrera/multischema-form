@@ -10,8 +10,14 @@ export function ShippingAddress() {
   } = useFormContext<RegistrationFormSchemaProps>()
 
   return (
-    <fieldset className="space-y-4">
-      <legend className="text-xl font-semibold mx-auto">
+    <fieldset
+      className="space-y-4"
+      data-testid="shipping-address-component-container"
+    >
+      <legend
+        className="text-xl font-semibold mx-auto"
+        data-testid="shipping-address-component-title"
+      >
         Shipping address
       </legend>
       <Controller
@@ -24,6 +30,7 @@ export function ShippingAddress() {
             type="text"
             label="Address"
             errorMessage={errors?.shippingAddress?.address?.message}
+            data-testid="shipping-address-component-address"
           />
         )}
       />
@@ -37,6 +44,7 @@ export function ShippingAddress() {
             type="text"
             label="City"
             errorMessage={errors?.shippingAddress?.city?.message}
+            data-testid="shipping-address-component-city"
           />
         )}
       />
@@ -50,6 +58,7 @@ export function ShippingAddress() {
             type="text"
             label="State"
             errorMessage={errors?.shippingAddress?.state?.message}
+            data-testid="shipping-address-component-state"
           />
         )}
       />
@@ -64,6 +73,7 @@ export function ShippingAddress() {
             inputMode="numeric"
             label="Zip code"
             errorMessage={errors?.shippingAddress?.zipCode?.message}
+            data-testid="shipping-address-component-zip-code"
           />
         )}
       />

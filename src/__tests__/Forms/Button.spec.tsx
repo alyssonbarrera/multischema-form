@@ -53,7 +53,7 @@ describe('Form Button Component', () => {
   })
 
   it('should be able to execute the onClick function when the button is clicked', () => {
-    const onClickFunction = vitest.fn()
+    const onClickFunction = vi.fn()
 
     render(
       <Button

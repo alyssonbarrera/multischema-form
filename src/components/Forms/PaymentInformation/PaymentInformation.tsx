@@ -10,8 +10,14 @@ export function PaymentInformation() {
   } = useFormContext<RegistrationFormSchemaProps>()
 
   return (
-    <fieldset className="space-y-4">
-      <legend className="text-xl font-semibold mx-auto">
+    <fieldset
+      className="space-y-4"
+      data-testid="payment-information-component-container"
+    >
+      <legend
+        className="text-xl font-semibold mx-auto"
+        data-testid="payment-information-component-title"
+      >
         Payment information
       </legend>
       <div className="space-y-4">
@@ -26,6 +32,7 @@ export function PaymentInformation() {
               inputMode="numeric"
               label="Card number"
               errorMessage={errors?.paymentInformation?.cardNumber?.message}
+              data-testid="payment-information-component-card-number"
             />
           )}
         />
@@ -39,6 +46,7 @@ export function PaymentInformation() {
               type="text"
               label="Cardholder name"
               errorMessage={errors?.paymentInformation?.cardholderName?.message}
+              data-testid="payment-information-component-cardholder-name"
             />
           )}
         />
@@ -55,6 +63,7 @@ export function PaymentInformation() {
                 errorMessage={
                   errors?.paymentInformation?.expirationDate?.message
                 }
+                data-testid="payment-information-component-expiration-date"
               />
             )}
           />
@@ -69,6 +78,7 @@ export function PaymentInformation() {
                 inputMode="numeric"
                 label="CVV"
                 errorMessage={errors?.paymentInformation?.cvv?.message}
+                data-testid="payment-information-component-cvv"
               />
             )}
           />
