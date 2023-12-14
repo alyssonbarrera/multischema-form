@@ -19,7 +19,7 @@ export default mergeConfig(
       coverage: {
         exclude: ['**/node_modules/**', '**/dist/**'],
         include: ['src/**/*.tsx'],
-        reporter: ['html'],
+        reporter: ['text', 'text-summary', 'html'],
       },
     },
   }),
