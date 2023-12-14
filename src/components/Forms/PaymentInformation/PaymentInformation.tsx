@@ -51,7 +51,6 @@ export function PaymentInformation() {
               <Input
                 {...field}
                 type="text"
-                inputMode="numeric"
                 label="Expiration date"
                 errorMessage={
                   errors?.paymentInformation?.expirationDate?.message

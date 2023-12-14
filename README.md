@@ -1,16 +1,20 @@
+<div align="center">
+  <img width="600px" src="./public/og.png" alt="cover image" />
+</div>
+
 # Description
 
-This project is an example of how to use React with Vite and TypeScript, React Hook Form, Tailwind, and Zod to create a three-step form.
+This project is an example of how to use React Hook Form and Zod to create a multi-step form.
 
 # Technologies used
 
-React
-Vite
-TypeScript
-React Hook Form
-Tailwind
-Zod
-How to use
+- React  
+- Vite  
+- TypeScript  
+- Tailwind  
+- Shadcn/ui  
+- React Hook Form  
+- Zod  
 
 # To use this project, follow these steps:
 
@@ -52,7 +56,7 @@ The project's form is composed of three steps:
 
 # Acknowledgements
 
-We thank React, Vite, TypeScript, React Hook Form, Tailwind, and Zod for providing the tools necessary to create this project.
+React, Vite, TypeScript, Tailwind, Shadcn/ui, React Hook Form, and Zod are thanked for providing the tools necessary to create this project.
 
 # Contributions
 
